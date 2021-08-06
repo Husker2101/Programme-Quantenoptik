@@ -33,4 +33,4 @@ jobs:
         shell: bash
         run: |
           source activate Programme-Quantenoptik
-          pytest --nbval
+          pytest --nbval-lax
