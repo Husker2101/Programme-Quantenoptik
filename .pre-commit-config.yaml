@@ -38,7 +38,7 @@ repos:
   - repo: https://github.com/MarcoGorelli/check-execution-order
     rev: v0.1.1
     hooks:
-    - id: check-execution-order
+      - id: check-execution-order
 
   # - repo: https://github.com/codespell-project/codespell
   #   rev: v2.1.0

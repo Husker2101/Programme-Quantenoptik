@@ -8,7 +8,7 @@ Die Abhängigkeiten können mittels [Anaconda](https://www.anaconda.com/products
 
 ### Anaconda Navigator
 
-Zum importieren des environments mit dem `Anaconda Navigator` kann man dem Abschnitt `How to Import anaconda environments`  
+Zum importieren des environments mit dem `Anaconda Navigator` kann man dem Abschnitt `How to Import anaconda environments`
 [dieser Anleitung](https://evidencen.com/how-to-create-export-and-import-anaconda-environments/) folgen.
 
 ### Kommandozeile
