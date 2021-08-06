@@ -1,0 +1,43 @@
+[Version]
+LogVI = "1.1"
+
+[Date & Time]
+Date = "11.09.2020"
+Time = "19:58"
+
+[Excitation by]
+Excitation = ""
+
+[Powermeter]
+Name = " "
+Sensor = " "
+Wavelength = 0.000000    
+Power = 0.000000    
+
+[Sample Information]
+Sample Name = ""
+Sample Part = ""
+Structure = ""
+Your Name = ""
+OD Filter = ""
+
+[Lakeshore]
+Temperature = 5.361000    
+
+[Monochromator]
+Grating = "1500 g/mm BLZ= H-NIR"
+Wavelength = 934.000000    
+Entranceslitwidth = 0    
+Mirror position = 0    
+Exit Slitwidth = 0    
+CCD Temperature = -119.000000    
+
+[Filterwheel]
+OD = 0.262558    
+
+[TL Rotation Mount]
+Position (°) = 0.000000    
+
+[Agilent]
+Voltage (V) = 0.000000    
+Current (A) = 0.000000    
