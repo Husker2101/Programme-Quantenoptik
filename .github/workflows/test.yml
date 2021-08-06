@@ -3,9 +3,19 @@ name: Tests
 on: [push, pull_request]
 
 jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Run pre-commit
+        uses: pre-commit/action@v2.0.3
 
   test:
     name: Test
+    needs: [pre-commit]
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
