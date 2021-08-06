@@ -1,0 +1,27 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+
+  test:
+    name: Test
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup conda
+        uses: s-weigand/setup-conda@v1
+        with:
+          activate-conda: false
+      - name: Install dependencies
+        run: |
+          conda env create --file binder/environment.yml
+      - name: Show installed packages
+        run: |
+          conda list -n Programme-Quantenoptik
+      - name: Run tests
+        shell: bash
+        run: |
+          source activate Programme-Quantenoptik
+          pytest --nbval
+
