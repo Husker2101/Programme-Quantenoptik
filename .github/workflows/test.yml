@@ -1,0 +1,36 @@
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+      - name: Run pre-commit
+        uses: pre-commit/action@v2.0.3
+
+  test:
+    name: Test
+    needs: [pre-commit]
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup conda
+        uses: s-weigand/setup-conda@v1
+        with:
+          activate-conda: false
+      - name: Install dependencies
+        run: |
+          conda env create --file binder/environment.yml
+      - name: Show installed packages
+        run: |
+          conda list -n Programme-Quantenoptik
+      - name: Run tests
+        shell: bash
+        run: |
+          source activate Programme-Quantenoptik
+          pytest --nbval
